@@ -34,7 +34,7 @@ More information: <a href="http://rosin-project.eu">rosin-project.eu</a>
      alt="eu_flag" height="45" align="left" >  
 
 This project has received funding from the European Union’s Horizon 2020  
-research and innovation programme under grant agreement no. 732287. 
+research and innovation programme under grant agreement no. 732287.
 
 
 ## How to report an issue
@@ -131,7 +131,7 @@ $ mkdir -p catkin_ws/src && cd catkin_ws
 $ git clone https://github.com/UniversalRobots/Universal_Robots_ROS_Driver.git src/Universal_Robots_ROS_Driver
 
 # clone fork of the description. This is currently necessary, until the changes are merged upstream.
-$ git clone -b calibration_devel https://github.com/fmauch/universal_robot.git src/fmauch_universal_robot
+$ git clone -b calibration_devel https://github.com/samaypashine/universal_robot.git src/universal_robot
 
 # install dependencies
 $ sudo apt update -qq
@@ -155,7 +155,7 @@ $ source /opt/ros/<your_ros_version>/setup.bash
 $ mkdir -p catkin_ws/src && cd catkin_ws
 $ git clone -b boost https://github.com/UniversalRobots/Universal_Robots_Client_Library.git src/Universal_Robots_Client_Library
 $ git clone https://github.com/UniversalRobots/Universal_Robots_ROS_Driver.git src/Universal_Robots_ROS_Driver
-$ git clone -b calibration_devel https://github.com/fmauch/universal_robot.git src/fmauch_universal_robot
+$ git clone -b calibration_devel https://github.com/samaypashine/universal_robot.git src/universal_robot
 $ sudo apt update -qq
 $ rosdep update
 $ rosdep install --from-paths src --ignore-src -y
