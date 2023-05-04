@@ -140,7 +140,7 @@ forward_cartesian_traj_controller:
 
 twist_controller:
   type: "ros_controllers_cartesian/TwistController"
-  frame_id: "tool0_controller"
+  frame_id: "right_tool0_controller"
   publish_rate: *loop_hz
   joints: *robot_joints
 
@@ -148,19 +148,32 @@ pose_based_cartesian_traj_controller:
     type: pose_controllers/CartesianTrajectoryController
 
     # UR driver convention
-    base: base
-    tip: tool0_controller
+    base: right_base
+    tip: right_tool0_controller
     joints: *robot_joints
 
 joint_based_cartesian_traj_controller:
     type: position_controllers/CartesianTrajectoryController
 
     # UR driver convention
-    base: base
-    tip: tool0
+    base: right_base
+    tip: right_tool0
     joints: *robot_joints
 
 robot_status_controller:
    type: industrial_robot_status_controller/IndustrialRobotStatusController
    handle_name: industrial_robot_status_handle
    publish_rate: 10
+
+controller_list:
+  - name: scaled_pos_joint_traj_controller
+    action_ns: follow_joint_trajectory
+    default: True
+    type: FollowJointTrajectory
+    joints:
+      - right_shoulder_pan_joint
+      - right_shoulder_lift_joint
+      - right_elbow_joint
+      - right_wrist_1_joint
+      - right_wrist_2_joint
+      - right_wrist_3_joint
