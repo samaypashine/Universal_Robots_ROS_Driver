@@ -164,16 +164,3 @@ robot_status_controller:
    type: industrial_robot_status_controller/IndustrialRobotStatusController
    handle_name: industrial_robot_status_handle
    publish_rate: 10
-
-controller_list:
-  - name: scaled_pos_joint_traj_controller
-    action_ns: follow_joint_trajectory
-    default: True
-    type: FollowJointTrajectory
-    joints:
-      - right_shoulder_pan_joint
-      - right_shoulder_lift_joint
-      - right_elbow_joint
-      - right_wrist_1_joint
-      - right_wrist_2_joint
-      - right_wrist_3_joint
